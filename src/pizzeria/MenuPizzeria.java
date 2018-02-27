@@ -4,25 +4,16 @@ import java.util.Scanner;
 
 import controller.MenuService;
 import controller.MenuServiceFactory;
+import exception.StockageException;
 import persistence.IPizzaDao;
 import persistence.PizzaMemDao;
 
+/**
+ * @author Tanon Console d'éxecution de l'application
+ */
 public class MenuPizzeria {
 
 	static IPizzaDao dao = new PizzaMemDao();
-
-	/**
-	 * @param args
-	 */
-	/**
-	 * @param args
-	 */
-	/**
-	 * @param args
-	 */
-	/**
-	 * @param args
-	 */
 
 	public static void main(String[] args) {
 
@@ -34,11 +25,16 @@ public class MenuPizzeria {
 		do {
 			System.out.println("Veuillez effectuer un choix:");
 
-			choix = scan.nextInt();
+			choix = Integer.parseInt(scan.nextLine());
 			if (choix >= 1 && choix <= 4) {
 
 				MenuService service = MenuServiceFactory.serviceFactory(choix);
-				service.executeUC(scan);
+				try {
+					service.executeUC(scan);
+				} catch (StockageException e) {
+
+					System.out.println(e.getMessage());
+				}
 			}
 
 		} while (choix != 99);
@@ -46,6 +42,9 @@ public class MenuPizzeria {
 
 	}
 
+	/**
+	 * Methode pour afficher le menu
+	 */
 	public static void menu() {
 		System.out.println("\n****** Menu Pizzeria******");
 		System.out.println("1. Lister les pizzas");

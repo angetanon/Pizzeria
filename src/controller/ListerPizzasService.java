@@ -4,6 +4,12 @@ import java.util.Scanner;
 
 import pizzeria.Pizza;
 
+/**
+ * Classe du menu service liste des pizzas
+ * 
+ * @author Tanon
+ *
+ */
 public class ListerPizzasService extends MenuService {
 
 	@Override

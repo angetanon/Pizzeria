@@ -1,7 +1,20 @@
 package controller;
 
+/**
+ * Classe du menu service factory
+ * 
+ * @author Tanon
+ *
+ */
 public class MenuServiceFactory {
 
+	/**
+	 * Methodes du menu des services liste, ajout, mise à jour et suppression de
+	 * pizza
+	 * 
+	 * @param choix
+	 * @return MenuService
+	 */
 	public static MenuService serviceFactory(int choix) {
 
 		switch (choix) {
