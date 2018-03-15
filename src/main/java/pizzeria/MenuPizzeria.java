@@ -5,15 +5,13 @@ import java.util.Scanner;
 import controller.MenuService;
 import controller.MenuServiceFactory;
 import exception.StockageException;
-import persistence.IPizzaDao;
-import persistence.PizzaMemDao;
 
 /**
  * @author Tanon Console d'éxecution de l'application
  */
 public class MenuPizzeria {
 
-	static IPizzaDao dao = new PizzaMemDao();
+	//static IPizzaDao dao = new PizzaMemDao();
 
 	public static void main(String[] args) {
 

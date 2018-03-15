@@ -30,10 +30,10 @@ public class AjouterPizzaService extends MenuService {
 		System.out.println("\n Veuillez saisir le prix");
 		double choixPrix = Double.parseDouble(scan.nextLine());
 
-		System.out.println("\n Veuillez saisir la categorie");
-		String libelle = scan.nextLine();
+		System.out.println("\n Veuillez saisir le nom de la categorie");
+		String nom = scan.nextLine();
 
-		dao.saveNewPizza(new Pizza(choixCode, choixNom, choixPrix, CategoriePizza.find(libelle)));
+		dao.saveNewPizza(new Pizza(choixCode, choixNom, choixPrix, CategoriePizza.valueOf(nom)));
 		for (Pizza p : dao.findAllPizzas()) {
 			System.out.println(p);
 		}
