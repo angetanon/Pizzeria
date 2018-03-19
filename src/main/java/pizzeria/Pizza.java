@@ -1,32 +1,49 @@
 package pizzeria;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * @author Tanon Classe principale de l'objet pizza
  */
+@Entity
 public class Pizza {
 
 	/**
 	 * identifiant de la pizza
 	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "ID")
 	private int id;
 	/**
 	 * code de la pizza
 	 */
+	@Column(name = "CODE")
 	private String code;
 
 	/**
 	 * libelle de la pizza
 	 */
+	@Column(name = "LIBELLE")
 	private String libelle;
 
 	/**
 	 * prix de la pizza
 	 */
+	@Column(name = "PRIX")
 	private double prix;
 
 	/**
 	 * categorie de la pizza
 	 */
+	@Enumerated(EnumType.STRING)
+	@Column(name = "CATEGORIE_PIZZA")
 	private CategoriePizza categorie;
 
 	/**
@@ -42,14 +59,16 @@ public class Pizza {
 	 * @param prix
 	 * @param categorie
 	 */
+	public Pizza() {
+
+	}
+
 	public Pizza(String code, String libelle, double prix, CategoriePizza categorie) {
-		this.id = compteur;
+
 		this.setCode(code);
 		this.setLibelle(libelle);
 		this.setPrix(prix);
 		this.categorie = categorie;
-
-		compteur++;
 
 	}
 
