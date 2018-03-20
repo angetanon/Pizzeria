@@ -24,7 +24,7 @@ public class MenuPizzeria {
 			System.out.println("Veuillez effectuer un choix:");
 
 			choix = Integer.parseInt(scan.nextLine());
-			if (choix >= 1 && choix <= 4) {
+			if (choix >= 1 && choix <= 5) {
 
 				MenuService service = MenuServiceFactory.serviceFactory(choix);
 				try {
@@ -49,6 +49,7 @@ public class MenuPizzeria {
 		System.out.println("2. Ajouter une nouvelle pizza");
 		System.out.println("3. Mettre à jour une pizza");
 		System.out.println("4. Supprimer une pizza");
+		System.out.println("5. Enregistrer une pizza");
 		System.out.println("99. Sortir \n");
 
 	}

@@ -10,8 +10,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
+import dao.IPizzaDao;
 import exception.StockageException;
-import persistence.IPizzaDao;
 
 public class SupprimerPizzaServiceTest {
 

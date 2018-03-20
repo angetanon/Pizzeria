@@ -8,6 +8,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import dao.IPizzaDao;
+import dao.PizzaMemDao;
 import pizzeria.CategoriePizza;
 import pizzeria.Pizza;
 

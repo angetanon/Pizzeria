@@ -7,7 +7,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import persistence.IPizzaDao;
 import pizzeria.CategoriePizza;
 import pizzeria.Pizza;
 

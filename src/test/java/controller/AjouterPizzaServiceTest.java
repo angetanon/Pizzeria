@@ -7,9 +7,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
+import dao.IPizzaDao;
 import exception.StockageException;
-import persistence.IPizzaDao;
-
 import pizzeria.CategoriePizza;
 
 import static org.junit.contrib.java.lang.system.TextFromStandardInputStream.*;

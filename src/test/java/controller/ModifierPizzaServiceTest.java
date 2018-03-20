@@ -11,8 +11,8 @@ import org.junit.Test;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 import org.mockito.Mockito;
 
+import dao.IPizzaDao;
 import exception.StockageException;
-import persistence.IPizzaDao;
 import pizzeria.CategoriePizza;
 
 public class ModifierPizzaServiceTest {

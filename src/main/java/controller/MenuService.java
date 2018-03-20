@@ -2,10 +2,11 @@ package controller;
 
 import java.util.Scanner;
 
+import dao.IPizzaDao;
 import dao.PizzaDaoJDBC;
+import dao.PizzaDaoJPA;
+import dao.PizzaMemDao;
 import exception.StockageException;
-import persistence.IPizzaDao;
-import persistence.PizzaMemDao;
 
 /**
  * Classe du menu des services
@@ -15,7 +16,7 @@ import persistence.PizzaMemDao;
  */
 public abstract class MenuService {
 
-	static IPizzaDao dao = new PizzaDaoJDBC();
+	static IPizzaDao dao = new PizzaDaoJPA();
 
 	public static IPizzaDao getDao() {
 		return dao;

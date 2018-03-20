@@ -7,11 +7,13 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author Tanon Classe principale de l'objet pizza
  */
 @Entity
+@Table(name = "pizza")
 public class Pizza {
 
 	/**
@@ -42,8 +44,8 @@ public class Pizza {
 	/**
 	 * categorie de la pizza
 	 */
-	@Enumerated(EnumType.STRING)
 	@Column(name = "CATEGORIE_PIZZA")
+	@Enumerated(EnumType.STRING)
 	private CategoriePizza categorie;
 
 	/**

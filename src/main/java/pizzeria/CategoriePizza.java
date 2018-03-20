@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 /**
  * @author Tanon Abedjinan Categorie de pizza
  */
-@Entity
 public enum CategoriePizza {
 	/**
 	 * catgorie avec viande
